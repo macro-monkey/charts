@@ -13,7 +13,7 @@ web_page = urlopen(req).read()
 
 df = pd.read_html(web_page, header=0)[0]
 
-df['Date'] = pd.to_datetime(df['Date'], format='%d/%m/%Y')
+df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y')
 
 new_cols = {'Date':'date',
             'Total Traveler Throughput': 'pax_20',
